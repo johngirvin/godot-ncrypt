@@ -1,0 +1,339 @@
+Core i7-3720QM @ 2.6Ghz
+MacBook Pro MD104LL/A (Mid 2012)
+
+AES-128 ECB:
+  128 time:     8.1ms rate:  15802.5 bytes/sec
+  256 time:    15.5ms rate:  16516.1 bytes/sec
+  512 time:    30.5ms rate:  16786.9 bytes/sec
+ 1024 time:    60.8ms rate:  16842.1 bytes/sec
+ 2048 time:   120.5ms rate:  16995.9 bytes/sec
+ 4096 time:   230.7ms rate:  17754.7 bytes/sec
+ 8192 time:   453.0ms rate:  18083.9 bytes/sec
+16384 time:   903.7ms rate:  18129.9 bytes/sec
+32768 time:  1978.2ms rate:  16564.6 bytes/sec
+
+AES-192 ECB:
+  128 time:    10.2ms rate:  12549.0 bytes/sec
+  256 time:    19.9ms rate:  12864.3 bytes/sec
+  512 time:    40.1ms rate:  12768.1 bytes/sec
+ 1024 time:    79.8ms rate:  12832.1 bytes/sec
+ 2048 time:   159.4ms rate:  12848.2 bytes/sec
+ 4096 time:   323.3ms rate:  12669.3 bytes/sec
+ 8192 time:   645.6ms rate:  12689.0 bytes/sec
+16384 time:  1335.8ms rate:  12265.3 bytes/sec
+32768 time:  2402.5ms rate:  13639.1 bytes/sec
+
+AES-256 ECB:
+  128 time:    10.8ms rate:  11851.9 bytes/sec
+  256 time:    21.2ms rate:  12075.5 bytes/sec
+  512 time:    42.4ms rate:  12075.5 bytes/sec
+ 1024 time:    83.2ms rate:  12307.7 bytes/sec
+ 2048 time:   170.7ms rate:  11997.7 bytes/sec
+ 4096 time:   342.6ms rate:  11955.6 bytes/sec
+ 8192 time:   703.0ms rate:  11652.9 bytes/sec
+16384 time:  1343.9ms rate:  12191.4 bytes/sec
+32768 time:  2661.2ms rate:  12313.2 bytes/sec
+
+
+AES-128 CBC:
+  128 time:     8.2ms rate:  15609.8 bytes/sec
+  256 time:    15.4ms rate:  16623.4 bytes/sec
+  512 time:    30.1ms rate:  17010.0 bytes/sec
+ 1024 time:    62.0ms rate:  16516.1 bytes/sec
+ 2048 time:   120.8ms rate:  16953.6 bytes/sec
+ 4096 time:   245.1ms rate:  16711.5 bytes/sec
+ 8192 time:   481.4ms rate:  17017.0 bytes/sec
+16384 time:   937.9ms rate:  17468.8 bytes/sec
+32768 time:  1871.8ms rate:  17506.1 bytes/sec
+
+AES-192 CBC:
+  128 time:     9.2ms rate:  13913.0 bytes/sec
+  256 time:    18.3ms rate:  13989.1 bytes/sec
+  512 time:    35.3ms rate:  14504.2 bytes/sec
+ 1024 time:    72.3ms rate:  14163.2 bytes/sec
+ 2048 time:   146.1ms rate:  14017.8 bytes/sec
+ 4096 time:   293.3ms rate:  13965.2 bytes/sec
+ 8192 time:   580.3ms rate:  14116.8 bytes/sec
+16384 time:  1142.0ms rate:  14346.8 bytes/sec
+32768 time:  2319.3ms rate:  14128.4 bytes/sec
+
+AES-256 CBC:
+  128 time:    11.6ms rate:  11034.5 bytes/sec
+  256 time:    22.4ms rate:  11428.6 bytes/sec
+  512 time:    43.1ms rate:  11879.4 bytes/sec
+ 1024 time:    87.7ms rate:  11676.2 bytes/sec
+ 2048 time:   173.5ms rate:  11804.0 bytes/sec
+ 4096 time:   346.1ms rate:  11834.7 bytes/sec
+ 8192 time:   686.1ms rate:  11940.0 bytes/sec
+16384 time:  1356.8ms rate:  12075.5 bytes/sec
+32768 time:  2682.4ms rate:  12215.9 bytes/sec
+
+
+AES-128 CTR:
+  128 time:     7.6ms rate:  16842.1 bytes/sec
+  256 time:    15.0ms rate:  17066.7 bytes/sec
+  512 time:    30.2ms rate:  16953.6 bytes/sec
+ 1024 time:    61.3ms rate:  16704.7 bytes/sec
+ 2048 time:   124.4ms rate:  16463.0 bytes/sec
+ 4096 time:   246.9ms rate:  16589.7 bytes/sec
+ 8192 time:   492.5ms rate:  16633.5 bytes/sec
+16384 time:   956.1ms rate:  17136.3 bytes/sec
+32768 time:  1960.5ms rate:  16714.1 bytes/sec
+
+AES-192 CTR:
+  128 time:     9.6ms rate:  13333.3 bytes/sec
+  256 time:    19.1ms rate:  13403.1 bytes/sec
+  512 time:    37.7ms rate:  13580.9 bytes/sec
+ 1024 time:    75.4ms rate:  13580.9 bytes/sec
+ 2048 time:   155.1ms rate:  13204.4 bytes/sec
+ 4096 time:   303.2ms rate:  13509.2 bytes/sec
+ 8192 time:   604.3ms rate:  13556.2 bytes/sec
+16384 time:  1186.5ms rate:  13808.7 bytes/sec
+32768 time:  2384.6ms rate:  13741.5 bytes/sec
+
+AES-256 CTR:
+  128 time:    11.7ms rate:  10940.2 bytes/sec
+  256 time:    23.5ms rate:  10893.6 bytes/sec
+  512 time:    44.3ms rate:  11557.6 bytes/sec
+ 1024 time:    89.8ms rate:  11403.1 bytes/sec
+ 2048 time:   179.5ms rate:  11409.5 bytes/sec
+ 4096 time:   354.3ms rate:  11560.8 bytes/sec
+ 8192 time:   701.0ms rate:  11686.2 bytes/sec
+16384 time:  1402.7ms rate:  11680.3 bytes/sec
+32768 time:  2781.8ms rate:  11779.4 bytes/sec
+
+
+ARCFOUR-256 (drop 0):
+  128 time:     0.8ms rate: 160000.0 bytes/sec
+  256 time:     1.2ms rate: 213333.3 bytes/sec
+  512 time:     1.8ms rate: 284444.4 bytes/sec
+ 1024 time:     3.7ms rate: 276756.8 bytes/sec
+ 2048 time:     7.3ms rate: 280547.9 bytes/sec
+ 4096 time:    12.9ms rate: 317519.4 bytes/sec
+ 8192 time:    25.2ms rate: 325079.4 bytes/sec
+16384 time:    50.9ms rate: 321886.1 bytes/sec
+32768 time:   102.1ms rate: 320940.3 bytes/sec
+
+ARCFOUR-512 (drop 0):
+  128 time:     0.9ms rate: 142222.2 bytes/sec
+  256 time:     1.5ms rate: 170666.7 bytes/sec
+  512 time:     1.9ms rate: 269473.7 bytes/sec
+ 1024 time:     3.3ms rate: 310303.0 bytes/sec
+ 2048 time:     6.6ms rate: 310303.0 bytes/sec
+ 4096 time:    13.4ms rate: 305671.6 bytes/sec
+ 8192 time:    26.4ms rate: 310303.0 bytes/sec
+16384 time:    51.2ms rate: 320000.0 bytes/sec
+32768 time:   101.6ms rate: 322519.7 bytes/sec
+
+ARCFOUR-1024 (drop 0):
+  128 time:     1.0ms rate: 128000.0 bytes/sec
+  256 time:     1.4ms rate: 182857.1 bytes/sec
+  512 time:     2.0ms rate: 256000.0 bytes/sec
+ 1024 time:     3.5ms rate: 292571.4 bytes/sec
+ 2048 time:     6.6ms rate: 310303.0 bytes/sec
+ 4096 time:    12.9ms rate: 317519.4 bytes/sec
+ 8192 time:    27.0ms rate: 303407.4 bytes/sec
+16384 time:    50.7ms rate: 323155.8 bytes/sec
+32768 time:   102.0ms rate: 321254.9 bytes/sec
+
+ARCFOUR-2048 (drop 0):
+  128 time:     0.9ms rate: 142222.2 bytes/sec
+  256 time:     1.4ms rate: 182857.1 bytes/sec
+  512 time:     1.9ms rate: 269473.7 bytes/sec
+ 1024 time:     3.6ms rate: 284444.4 bytes/sec
+ 2048 time:     7.2ms rate: 284444.4 bytes/sec
+ 4096 time:    12.7ms rate: 322519.7 bytes/sec
+ 8192 time:    26.1ms rate: 313869.7 bytes/sec
+16384 time:    50.3ms rate: 325725.6 bytes/sec
+32768 time:   101.5ms rate: 322837.4 bytes/sec
+
+
+ARCFOUR-256 (drop 3072):
+  128 time:     6.8ms rate:  18823.5 bytes/sec
+  256 time:     6.8ms rate:  37647.1 bytes/sec
+  512 time:     7.3ms rate:  70137.0 bytes/sec
+ 1024 time:     9.2ms rate: 111304.3 bytes/sec
+ 2048 time:    12.3ms rate: 166504.1 bytes/sec
+ 4096 time:    18.6ms rate: 220215.1 bytes/sec
+ 8192 time:    31.2ms rate: 262564.1 bytes/sec
+16384 time:    56.9ms rate: 287943.8 bytes/sec
+32768 time:   108.6ms rate: 301731.1 bytes/sec
+
+ARCFOUR-512 (drop 3072):
+  128 time:     6.9ms rate:  18550.7 bytes/sec
+  256 time:     7.1ms rate:  36056.3 bytes/sec
+  512 time:     7.3ms rate:  70137.0 bytes/sec
+ 1024 time:     9.5ms rate: 107789.5 bytes/sec
+ 2048 time:    12.9ms rate: 158759.7 bytes/sec
+ 4096 time:    19.5ms rate: 210051.3 bytes/sec
+ 8192 time:    31.2ms rate: 262564.1 bytes/sec
+16384 time:    56.8ms rate: 288450.7 bytes/sec
+32768 time:   105.9ms rate: 309424.0 bytes/sec
+
+ARCFOUR-1024 (drop 3072):
+  128 time:     6.9ms rate:  18550.7 bytes/sec
+  256 time:     6.9ms rate:  37101.4 bytes/sec
+  512 time:     8.2ms rate:  62439.0 bytes/sec
+ 1024 time:     9.7ms rate: 105567.0 bytes/sec
+ 2048 time:    12.5ms rate: 163840.0 bytes/sec
+ 4096 time:    19.3ms rate: 212228.0 bytes/sec
+ 8192 time:    31.8ms rate: 257610.1 bytes/sec
+16384 time:    57.8ms rate: 283460.2 bytes/sec
+32768 time:   107.8ms rate: 303970.3 bytes/sec
+
+ARCFOUR-2048 (drop 3072):
+  128 time:     6.7ms rate:  19104.5 bytes/sec
+  256 time:     6.8ms rate:  37647.1 bytes/sec
+  512 time:     8.2ms rate:  62439.0 bytes/sec
+ 1024 time:     9.2ms rate: 111304.3 bytes/sec
+ 2048 time:    13.5ms rate: 151703.7 bytes/sec
+ 4096 time:    18.7ms rate: 219037.4 bytes/sec
+ 8192 time:    32.8ms rate: 249756.1 bytes/sec
+16384 time:    57.5ms rate: 284939.1 bytes/sec
+32768 time:   110.5ms rate: 296543.0 bytes/sec
+
+
+CHACHA8-128:
+  128 time:     1.6ms rate:  80000.0 bytes/sec
+  256 time:     3.1ms rate:  82580.6 bytes/sec
+  512 time:     6.5ms rate:  78769.2 bytes/sec
+ 1024 time:    13.6ms rate:  75294.1 bytes/sec
+ 2048 time:    27.7ms rate:  73935.0 bytes/sec
+ 4096 time:    54.2ms rate:  75572.0 bytes/sec
+ 8192 time:   108.8ms rate:  75294.1 bytes/sec
+16384 time:   218.9ms rate:  74847.0 bytes/sec
+32768 time:   433.4ms rate:  75606.8 bytes/sec
+
+CHACHA8-256:
+  128 time:     1.8ms rate:  71111.1 bytes/sec
+  256 time:     3.4ms rate:  75294.1 bytes/sec
+  512 time:     7.3ms rate:  70137.0 bytes/sec
+ 1024 time:    13.6ms rate:  75294.1 bytes/sec
+ 2048 time:    27.7ms rate:  73935.0 bytes/sec
+ 4096 time:    56.1ms rate:  73012.5 bytes/sec
+ 8192 time:   112.3ms rate:  72947.5 bytes/sec
+16384 time:   225.2ms rate:  72753.1 bytes/sec
+32768 time:   448.0ms rate:  73142.9 bytes/sec
+
+
+CHACHA12-128:
+  128 time:     2.5ms rate:  51200.0 bytes/sec
+  256 time:     4.4ms rate:  58181.8 bytes/sec
+  512 time:     9.8ms rate:  52244.9 bytes/sec
+ 1024 time:    18.6ms rate:  55053.8 bytes/sec
+ 2048 time:    38.0ms rate:  53894.7 bytes/sec
+ 4096 time:    73.3ms rate:  55879.9 bytes/sec
+ 8192 time:   151.8ms rate:  53965.7 bytes/sec
+16384 time:   295.1ms rate:  55520.2 bytes/sec
+32768 time:   594.7ms rate:  55100.1 bytes/sec
+
+CHACHA12-256:
+  128 time:     2.2ms rate:  58181.8 bytes/sec
+  256 time:     5.1ms rate:  50196.1 bytes/sec
+  512 time:     9.5ms rate:  53894.7 bytes/sec
+ 1024 time:    19.6ms rate:  52244.9 bytes/sec
+ 2048 time:    38.9ms rate:  52647.8 bytes/sec
+ 4096 time:    77.3ms rate:  52988.4 bytes/sec
+ 8192 time:   151.2ms rate:  54179.9 bytes/sec
+16384 time:   306.9ms rate:  53385.5 bytes/sec
+32768 time:   604.9ms rate:  54170.9 bytes/sec
+
+
+CHACHA20-128:
+  128 time:     3.3ms rate:  38787.9 bytes/sec
+  256 time:     7.7ms rate:  33246.8 bytes/sec
+  512 time:    13.9ms rate:  36834.5 bytes/sec
+ 1024 time:    29.4ms rate:  34829.9 bytes/sec
+ 2048 time:    56.2ms rate:  36441.3 bytes/sec
+ 4096 time:   114.2ms rate:  35866.9 bytes/sec
+ 8192 time:   227.2ms rate:  36056.3 bytes/sec
+16384 time:   461.6ms rate:  35493.9 bytes/sec
+32768 time:   904.3ms rate:  36235.8 bytes/sec
+
+CHACHA20-256:
+  128 time:     3.2ms rate:  40000.0 bytes/sec
+  256 time:     7.3ms rate:  35068.5 bytes/sec
+  512 time:    14.5ms rate:  35310.3 bytes/sec
+ 1024 time:    27.3ms rate:  37509.2 bytes/sec
+ 2048 time:    56.8ms rate:  36056.3 bytes/sec
+ 4096 time:   115.8ms rate:  35371.3 bytes/sec
+ 8192 time:   234.1ms rate:  34993.6 bytes/sec
+16384 time:   462.9ms rate:  35394.3 bytes/sec
+32768 time:   905.5ms rate:  36187.7 bytes/sec
+
+
+SHA256:
+  128 time:     5.4ms rate:  23703.7 bytes/sec
+  256 time:     9.2ms rate:  27826.1 bytes/sec
+  512 time:    15.6ms rate:  32820.5 bytes/sec
+ 1024 time:    30.7ms rate:  33355.0 bytes/sec
+ 2048 time:    58.6ms rate:  34948.8 bytes/sec
+ 4096 time:   119.0ms rate:  34420.2 bytes/sec
+ 8192 time:   233.1ms rate:  35143.7 bytes/sec
+16384 time:   461.8ms rate:  35478.6 bytes/sec
+32768 time:   916.7ms rate:  35745.6 bytes/sec
+
+
+HMACSHA256 (128 bit key):
+  128 time:    11.3ms rate:  11327.4 bytes/sec
+  256 time:    13.5ms rate:  18963.0 bytes/sec
+  512 time:    21.7ms rate:  23594.5 bytes/sec
+ 1024 time:    36.9ms rate:  27750.7 bytes/sec
+ 2048 time:    65.0ms rate:  31507.7 bytes/sec
+ 4096 time:   123.3ms rate:  33219.8 bytes/sec
+ 8192 time:   237.5ms rate:  34492.6 bytes/sec
+16384 time:   472.8ms rate:  34653.1 bytes/sec
+32768 time:   914.7ms rate:  35823.8 bytes/sec
+
+HMACSHA256 (512 bit key):
+  128 time:    10.7ms rate:  11962.6 bytes/sec
+  256 time:    14.4ms rate:  17777.8 bytes/sec
+  512 time:    21.6ms rate:  23703.7 bytes/sec
+ 1024 time:    36.5ms rate:  28054.8 bytes/sec
+ 2048 time:    64.7ms rate:  31653.8 bytes/sec
+ 4096 time:   123.2ms rate:  33246.8 bytes/sec
+ 8192 time:   236.2ms rate:  34682.5 bytes/sec
+16384 time:   468.0ms rate:  35008.5 bytes/sec
+32768 time:   910.5ms rate:  35989.0 bytes/sec
+
+
+CSPRNG-CHACHA (int64):
+ r: 8 time:     2.7ms rate:    369.4/sec
+ r:12 time:     3.6ms rate:    274.7/sec
+ r:20 time:     5.7ms rate:    175.1/sec
+
+CSPRNG-CHACHA8 (block):
+    4 time:     2.7ms rate:   1481.5 bytes/sec
+    8 time:     2.9ms rate:   2758.6 bytes/sec
+   16 time:     2.8ms rate:   5714.3 bytes/sec
+   32 time:     3.3ms rate:   9697.0 bytes/sec
+   64 time:     5.0ms rate:  12800.0 bytes/sec
+  128 time:     8.8ms rate:  14545.5 bytes/sec
+  192 time:    11.4ms rate:  16842.1 bytes/sec
+  256 time:    15.6ms rate:  16410.3 bytes/sec
+  384 time:    24.5ms rate:  15673.5 bytes/sec
+  512 time:    35.1ms rate:  14586.9 bytes/sec
+
+CSPRNG-CHACHA12 (block):
+    4 time:     4.0ms rate:   1000.0 bytes/sec
+    8 time:     4.2ms rate:   1904.8 bytes/sec
+   16 time:     4.6ms rate:   3478.3 bytes/sec
+   32 time:     7.8ms rate:   4102.6 bytes/sec
+   64 time:    10.5ms rate:   6095.2 bytes/sec
+  128 time:    15.0ms rate:   8533.3 bytes/sec
+  192 time:    25.2ms rate:   7619.0 bytes/sec
+  256 time:    29.7ms rate:   8619.5 bytes/sec
+  384 time:    31.4ms rate:  12229.3 bytes/sec
+  512 time:    42.5ms rate:  12047.1 bytes/sec
+
+CSPRNG-CHACHA20 (block):
+    4 time:     5.1ms rate:    784.3 bytes/sec
+    8 time:     5.0ms rate:   1600.0 bytes/sec
+   16 time:     4.9ms rate:   3265.3 bytes/sec
+   32 time:     6.9ms rate:   4637.7 bytes/sec
+   64 time:    14.0ms rate:   4571.4 bytes/sec
+  128 time:    18.2ms rate:   7033.0 bytes/sec
+  192 time:    23.5ms rate:   8170.2 bytes/sec
+  256 time:    30.0ms rate:   8533.3 bytes/sec
+  384 time:    44.7ms rate:   8590.6 bytes/sec
+  512 time:    60.7ms rate:   8434.9 bytes/sec

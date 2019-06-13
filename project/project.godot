@@ -1,0 +1,98 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AES",
+"language": "GDScript",
+"path": "res://NCrypt/Cipher/AES.gd"
+}, {
+"base": "Reference",
+"class": "ARCFOUR",
+"language": "GDScript",
+"path": "res://NCrypt/Cipher/ARCFOUR.gd"
+}, {
+"base": "Reference",
+"class": "CHACHA",
+"language": "GDScript",
+"path": "res://NCrypt/Cipher/CHACHA.gd"
+}, {
+"base": "Reference",
+"class": "HMACSHA256",
+"language": "GDScript",
+"path": "res://NCrypt/Hash/HMACSHA256.gd"
+}, {
+"base": "Reference",
+"class": "NCrypt",
+"language": "GDScript",
+"path": "res://NCrypt/NCrypt.gd"
+}, {
+"base": "SceneTree",
+"class": "NCryptBenchmark",
+"language": "GDScript",
+"path": "res://NCryptTest/NCryptBenchmark.gd"
+}, {
+"base": "SceneTree",
+"class": "NCryptBenchmarkRunner",
+"language": "GDScript",
+"path": "res://NCryptTest/NCryptBenchmarkRunner.gd"
+}, {
+"base": "SceneTree",
+"class": "NCryptTest",
+"language": "GDScript",
+"path": "res://NCryptTest/NCryptTest.gd"
+}, {
+"base": "SceneTree",
+"class": "NCryptTestRunner",
+"language": "GDScript",
+"path": "res://NCryptTest/NCryptTestRunner.gd"
+}, {
+"base": "Reference",
+"class": "PKCS5",
+"language": "GDScript",
+"path": "res://NCrypt/Pad/PKCS5.gd"
+}, {
+"base": "Reference",
+"class": "SHA256",
+"language": "GDScript",
+"path": "res://NCrypt/Hash/SHA256.gd"
+} ]
+_global_script_class_icons={
+"AES": "",
+"ARCFOUR": "",
+"CHACHA": "",
+"HMACSHA256": "",
+"NCrypt": "",
+"NCryptBenchmark": "",
+"NCryptBenchmarkRunner": "",
+"NCryptTest": "",
+"NCryptTestRunner": "",
+"PKCS5": "",
+"SHA256": ""
+}
+
+[application]
+
+config/name="G31Test"
+run/main_scene="res://Node2D.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=192
+window/size/height=256
+window/size/test_width=576
+window/size/test_height=768
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
