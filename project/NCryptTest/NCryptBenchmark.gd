@@ -91,6 +91,9 @@ func run_all_tests() -> void:
 
 	test_sha256()
 	test_hmac_sha256()
+	
+	test_prng_64()
+	test_prng_block()
 	return
 
 # ==============================================================================
@@ -255,3 +258,46 @@ func test_hmac_sha256() -> void:
 	print(' ')
 	return
 	
+
+func test_prng_64() -> void:
+	print('CSPRNG-CHACHA (int64):')
+	for rl in [ 8, 12, 20 ]:
+		var rng:CSPRNG = CSPRNG.new(rl)
+		var st:int = OS.get_ticks_msec()
+		var et:int = st
+		var ic:int = 0
+		while (true):
+			rng.rand_64()
+			et  = OS.get_ticks_msec()
+			ic += 1
+			if ((et - st) > MAX_TIME): break
+		
+		var avgms:float = float(et - st) / float(ic)
+		var avgrt:float = 1000.0 * (1.0/avgms)
+		print(' r:%2d time:%8.1fms rate:%9.1f/sec' % [ rl, avgms, avgrt ])
+	
+	print(' ')
+	return
+	
+		
+func test_prng_block() -> void:
+	for rl in [ 8, 12, 20 ]:
+		var rng:CSPRNG = CSPRNG.new(rl)
+		var results:Dictionary = {}
+		
+		for pl in [ 4, 8, 16, 32, 64, 128, 192, 256, 384, 512 ]:
+			var st:int = OS.get_ticks_msec()
+			var et:int = st
+			var ic:int = 0
+			while (true):
+				rng.rand_raw(pl)
+				et  = OS.get_ticks_msec()
+				ic += 1
+				if (ic >= MAX_ITERS || (et - st) > MAX_TIME): break
+			
+			results[pl] = float(et - st) / float(ic)
+			
+		_print_results('CSPRNG-CHACHA%d (block):' % rl, results)
+	
+	print(' ')
+	return

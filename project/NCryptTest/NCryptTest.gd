@@ -113,8 +113,12 @@ func run_all_tests() -> void:
 	print('test_hmac_sha256')
 	test_hmac_sha256()
 	
+	
+	# test prng
+	print('test_prng')
+	test_prng()
+	
 	# all ok
-	print('all tests passed')
 	return
 	
 # ==============================================================================

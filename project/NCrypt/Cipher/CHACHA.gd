@@ -194,7 +194,9 @@ class _ChaChaBlockCipher:
 	func chacha20_block(a_ky:PoolByteArray, a_iv:PoolByteArray, a_ctr:int, a_rounds:int) -> PoolByteArray:
 		assert(st.size() == 16)
 		assert(ws.size() == 16)
-		
+		assert(a_ky.size() == 16 || a_ky.size() == 32)
+		assert(a_iv.size() ==  8 || a_iv.size() == 12 || a_iv.size() == 16)
+
 		# initialise state
 		var s:int = 4
 		if (a_ky.size() == 16):
@@ -230,16 +232,23 @@ class _ChaChaBlockCipher:
 			for i in range(0,8,4):
 				st[s] = _u8_to_u32le(a_iv[i], a_iv[i+1], a_iv[i+2], a_iv[i+3])
 				s += 1
-		else:
+		elif (a_iv.size() == 12):
 			# RFC7539: 32 bit counter, 96 bit nonce
 			st[12] = a_ctr & NCrypt.B32
 			s = 13
 			for i in range(0,12,4):
 				st[s] = _u8_to_u32le(a_iv[i], a_iv[i+1], a_iv[i+2], a_iv[i+3])
 				s += 1
-		
+		else:
+			# PRNG mode: 128 bit nonce, a_ctr is ignored
+			s = 12
+			for i in range(0,16,4):
+				st[s] = _u8_to_u32le(a_iv[i], a_iv[i+1], a_iv[i+2], a_iv[i+3])
+				s += 1
+				
 		# round loop
-		for i in range(ws.size()): ws[i] = st[i]
+		for i in range(ws.size()):
+			ws[i] = st[i]
 
 		for r in range(a_rounds>>1):
 			_qround(ws, 0, 4, 8,12)

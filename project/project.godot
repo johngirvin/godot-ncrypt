@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://NCrypt/Cipher/CHACHA.gd"
 }, {
 "base": "Reference",
+"class": "CSPRNG",
+"language": "GDScript",
+"path": "res://NCrypt/PRNG/CSPRNG.gd"
+}, {
+"base": "Reference",
 "class": "HMACSHA256",
 "language": "GDScript",
 "path": "res://NCrypt/Hash/HMACSHA256.gd"
@@ -68,6 +73,7 @@ _global_script_class_icons={
 "AES": "",
 "ARCFOUR": "",
 "CHACHA": "",
+"CSPRNG": "",
 "HMACSHA256": "",
 "NCrypt": "",
 "NCryptBenchmark": "",
