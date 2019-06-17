@@ -656,9 +656,9 @@ func test_sha256() -> void:
 	for i in range(0, tv.size(), 2):
 		pt = NCrypt.hex_to_raw(tv[i])
 		ec = NCrypt.hex_to_raw(tv[i+1])
-		assert(_pba_equal(ec, SHA256.sha256_raw(pt)))
-		assert(_pba_equal(ec, NCrypt.hex_to_raw(SHA256.sha256_hex(pt))))
-		assert(_pba_equal(ec, Marshalls.base64_to_raw(SHA256.sha256_base64(pt))))
+		assert(_pba_equal(ec, SHA256.hash_raw(pt)))
+		assert(_pba_equal(ec, NCrypt.hex_to_raw(SHA256.hash_hex(pt))))
+		assert(_pba_equal(ec, Marshalls.base64_to_raw(SHA256.hash_base64(pt))))
 			
 	return
 	
@@ -696,11 +696,26 @@ func test_hmac_sha256() -> void:
 		ky = NCrypt.hex_to_raw(tv[i])
 		pt = NCrypt.hex_to_raw(tv[i+1])
 		ec = NCrypt.hex_to_raw(tv[i+2])
-		assert(_pba_equal(ec, HMACSHA256.hmac_sha256_raw(pt, ky)))
-		assert(_pba_equal(ec, NCrypt.hex_to_raw(HMACSHA256.hmac_sha256_hex(pt, ky))))
-		assert(_pba_equal(ec, Marshalls.base64_to_raw(HMACSHA256.hmac_sha256_base64(pt, ky))))
+		assert(_pba_equal(ec, HMACSHA256.hmac_raw(pt, ky)))
+		assert(_pba_equal(ec, NCrypt.hex_to_raw(HMACSHA256.hmac_hex(pt, ky))))
+		assert(_pba_equal(ec, Marshalls.base64_to_raw(HMACSHA256.hmac_base64(pt, ky))))
 	
 	return
 	
 # ==============================================================================
 
+func test_prng() -> void:
+	# test generation works
+	for rl in [ 8, 12, 20 ]:
+		var rng:CSPRNG = CSPRNG.new(rl)
+		for i in range(1024): rng.rand_64()
+	
+	# test block generation
+	for rl in [ 8, 12, 20 ]:
+		var rng:CSPRNG = CSPRNG.new(rl)
+		for i in [ 4, 8, 16, 32, 64, 128, 192, 256, 384, 512, 1024, 2069 ]:
+			assert(rng.rand_raw(i).size() == i)
+	
+	return
+	
+# ==============================================================================

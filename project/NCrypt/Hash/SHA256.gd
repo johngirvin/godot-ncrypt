@@ -39,8 +39,8 @@ a_in	:	Input buffer.
 
 Return	:	SHA256 of input buffer, encoded as a Base64 string.
 """
-static func sha256_base64(a_in:PoolByteArray) -> String:
-	return Marshalls.raw_to_base64(sha256_raw(a_in))
+static func hash_base64(a_in:PoolByteArray) -> String:
+	return Marshalls.raw_to_base64(hash_raw(a_in))
 
 
 """
@@ -51,8 +51,8 @@ a_in	:	Input buffer.
 
 Return	:	SHA256 of input buffer, encoded as a hexadecimal string.
 """
-static func sha256_hex(a_in:PoolByteArray) -> String:
-	return NCrypt.raw_to_hex(sha256_raw(a_in))
+static func hash_hex(a_in:PoolByteArray) -> String:
+	return NCrypt.raw_to_hex(hash_raw(a_in))
 
 
 """
@@ -63,7 +63,7 @@ a_in	:	Input buffer.
 
 Return	:	SHA256 of input buffer.
 """
-static func sha256_raw(a_in:PoolByteArray) -> PoolByteArray:
+static func hash_raw(a_in:PoolByteArray) -> PoolByteArray:
 	# Initialize hash values
 	# (first 32 bits of the fractional parts of the square roots of the first 8 primes 2..19):
 	var h0:int = 0x6a09e667

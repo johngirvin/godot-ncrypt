@@ -40,8 +40,8 @@ a_ky	:	HMAC key.
 
 Return	:	HMAC-SHA256 of input buffer, encoded as a Base64 string.
 """
-static func hmac_sha256_base64(a_in:PoolByteArray, a_ky:PoolByteArray) -> String:
-	return Marshalls.raw_to_base64(hmac_sha256_raw(a_in, a_ky))
+static func hmac_base64(a_in:PoolByteArray, a_ky:PoolByteArray) -> String:
+	return Marshalls.raw_to_base64(hmac_raw(a_in, a_ky))
 
 
 """
@@ -53,8 +53,8 @@ a_ky	:	HMAC key.
 
 Return	:	HMAC-SHA256 of input buffer, encoded as a hexadecimal string.
 """
-static func hmac_sha256_hex(a_in:PoolByteArray, a_ky:PoolByteArray) -> String:
-	return NCrypt.raw_to_hex(hmac_sha256_raw(a_in, a_ky))
+static func hmac_hex(a_in:PoolByteArray, a_ky:PoolByteArray) -> String:
+	return NCrypt.raw_to_hex(hmac_raw(a_in, a_ky))
 
 
 """
@@ -66,11 +66,11 @@ a_ky	:	HMAC key.
 
 Return	:	HMAC-SHA256 of input buffer.
 """
-static func hmac_sha256_raw(a_in:PoolByteArray, a_ky:PoolByteArray) -> PoolByteArray:
+static func hmac_raw(a_in:PoolByteArray, a_ky:PoolByteArray) -> PoolByteArray:
 	# keys longer than hash size are shortened by hashing them
 	# keys shorter than hash size are padded to hash size by padding with zeros on the right
 	if (a_ky.size() > 64):
-		a_ky = SHA256.sha256_raw(a_ky)
+		a_ky = SHA256.hash_raw(a_ky)
 	while (a_ky.size() < 64):
 		a_ky.append(0x00)
 	assert(a_ky.size() == 64)
@@ -83,4 +83,4 @@ static func hmac_sha256_raw(a_in:PoolByteArray, a_ky:PoolByteArray) -> PoolByteA
 		inner.append(a_ky[i] ^ 0x36)
 
 	# hmac = hash(o_key_pad ∥ hash(i_key_pad ∥ message))
-	return SHA256.sha256_raw(outer + SHA256.sha256_raw(inner + a_in))
+	return SHA256.hash_raw(outer + SHA256.hash_raw(inner + a_in))

@@ -220,7 +220,7 @@ func test_sha256() -> void:
 		var et:int = st
 		var ic:int = 0
 		while (true):
-			SHA256.sha256_raw(pt)
+			SHA256.hash_raw(pt)
 			et  = OS.get_ticks_msec()
 			ic += 1
 			if (ic >= MAX_ITERS || (et - st) > MAX_TIME): break
@@ -243,7 +243,7 @@ func test_hmac_sha256() -> void:
 			var et:int = st
 			var ic:int = 0
 			while (true):
-				HMACSHA256.hmac_sha256_raw(pt, A[kl])
+				HMACSHA256.hmac_raw(pt, A[kl])
 				et  = OS.get_ticks_msec()
 				ic += 1
 				if (ic >= MAX_ITERS || (et - st) > MAX_TIME): break
