@@ -39,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://NCrypt/NCrypt.gd"
 }, {
-"base": "SceneTree",
+"base": "Reference",
 "class": "NCryptBenchmark",
 "language": "GDScript",
 "path": "res://NCryptTest/NCryptBenchmark.gd"
@@ -49,7 +49,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://NCryptTest/NCryptBenchmarkRunner.gd"
 }, {
-"base": "SceneTree",
+"base": "Reference",
 "class": "NCryptTest",
 "language": "GDScript",
 "path": "res://NCryptTest/NCryptTest.gd"

@@ -25,7 +25,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 # ==============================================================================
-extends SceneTree
 class_name NCryptTest
 
 # ==============================================================================
@@ -98,7 +97,7 @@ func run_all_tests() -> void:
 	# test ciphers
 	print('test_aes')
 	test_aes()
-	
+
 	print('test_arcfour')
 	test_arcfour()
 
@@ -196,10 +195,10 @@ func test_rotr32() -> void:
 	assert(NCrypt.rotr32(0x80000001,  0)) == 0x80000001
 	assert(NCrypt.rotr32(0x80000001, 32)) == 0x80000001
 	
-	assert(NCrypt.rotr32(0x000000ff, 1)) == 0x8000007f
+	assert(NCrypt.rotr32(0x000000ff,  1)) == 0x8000007f
 	
 	return
-	
+
 # ==============================================================================
 
 func test_pkcs5() -> void:
