@@ -68,6 +68,11 @@ _global_script_classes=[ {
 "class": "SHA256",
 "language": "GDScript",
 "path": "res://NCrypt/Hash/SHA256.gd"
+}, {
+"base": "Reference",
+"class": "SIPHASH",
+"language": "GDScript",
+"path": "res://NCrypt/Hash/SIPHASH.gd"
 } ]
 _global_script_class_icons={
 "AES": "",
@@ -81,7 +86,8 @@ _global_script_class_icons={
 "NCryptTest": "",
 "NCryptTestRunner": "",
 "PKCS5": "",
-"SHA256": ""
+"SHA256": "",
+"SIPHASH": ""
 }
 
 [application]
@@ -101,4 +107,5 @@ window/stretch/aspect="keep"
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"

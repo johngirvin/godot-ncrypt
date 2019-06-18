@@ -90,6 +90,7 @@ func run_all_tests() -> void:
 
 	test_sha256()
 	test_hmac_sha256()
+	test_siphash()
 	
 	test_prng_64()
 	test_prng_block()
@@ -230,6 +231,32 @@ func test_sha256() -> void:
 		results[pl] = float(et - st) / float(ic)
 		
 	_print_results('SHA256:', results)
+	
+	print(' ')
+	return
+
+
+func test_siphash() -> void:
+	var results:Dictionary = {}
+	
+	for ol in [ 64, 128 ]:
+		for cr in [ [2,4], [4,8] ]:
+			var c:int = cr[0]
+			var r:int = cr[1]
+			for pl in [ 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768 ]:
+				var pt:PoolByteArray = P.subarray(0, pl-1)
+				var st:int = OS.get_ticks_msec()
+				var et:int = st
+				var ic:int = 0
+				while (true):
+					SIPHASH.hash_raw(pt, A[128], c, r, ol>>3)
+					et  = OS.get_ticks_msec()
+					ic += 1
+					if (ic >= MAX_ITERS || (et - st) > MAX_TIME): break
+				
+				results[pl] = float(et - st) / float(ic)
+				
+			_print_results('SIPHASH%d-%d (%d bit):' % [ c, r, ol ], results)
 	
 	print(' ')
 	return

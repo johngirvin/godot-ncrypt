@@ -13,6 +13,7 @@ This project contains pure GDScript implementations of a number of cryptographic
 * **HASH**
   * [SHA256](https://en.wikipedia.org/wiki/SHA-2)
   * [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC)
+  * [SIPHASH](https://en.wikipedia.org/wiki/SipHash): configurable rounds; 64/128 bit hash
 * **CSPRNG**
   * [CSRPNG](https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator) based on the [FORTUNA](https://en.wikipedia.org/wiki/Fortuna_(PRNG)) construction and CHACHA8/12/20 ciphers
   
