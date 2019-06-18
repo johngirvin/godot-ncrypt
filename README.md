@@ -61,6 +61,9 @@ Implementing cryptography is extremely easy to get wrong and leave your systems 
 exposed. Research the algorithms, their parameters, usage guidance and existing attacks on
 them to help you decide what best to use for your situation.
 
+If you need a specific algorithm implemented, or general help and/or guidance around
+implementing cryptography in your project, consider hiring me.
+
 
 ## EXAMPLES
 
@@ -120,7 +123,7 @@ var plain:String = PKCS5.unpad(AES.decrypt_cbc_b64(cipherB64, key, iv).to_ascii(
 
 __SLOW!__
 
-Some indicatove benchmark results are included in the _benchmark_ folder.
+Some indicative benchmark results are included in the _benchmark_ folder.
 
 On a typical mobile ARM7 processor you can expect AES-128 to encrypt at around 6Kb / second.
 ARCFOUR and CHACHA are faster, but can still take several seconds to process a multi-kilobyte buffer.
@@ -154,15 +157,16 @@ __Run the benchmark tests:__
 
 Contributions are welcome.
 
-Public Key, GCM and POLY1305 primitives are likely to be difficult to implement.
+Public Key, GCM and POLY1305 primitives are likely to be difficult to implement in GDScript.
 If you need these, using one of the alternative approaches is recommended.
 
 Note that no effort has been made to secure the implementations against memory snooping,
-side channel or other attacks. If you need these, using one of the alternative approaches
+timing, side channel or other attacks. If you need these, using one of the alternative approaches
 is recommended.
 
 Future versions of Godot Engine may incorporate more cryptographic functions into the core engine, 
 potentially making this project obsolete. We can hope.
+
 
 ## LICENSE
 
